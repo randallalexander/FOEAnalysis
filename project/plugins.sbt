@@ -1,0 +1,7 @@
+addSbtPlugin("com.typesafe.sbt"    % "sbt-git"               % "0.9.3")
+addSbtPlugin("net.virtual-void"    % "sbt-dependency-graph"  % "0.9.0")
+addSbtPlugin("org.wartremover"     % "sbt-wartremover"       % "2.2.1")
+addSbtPlugin("org.scoverage"       % "sbt-scoverage"         % "1.5.1")
+addSbtPlugin("pl.project13.scala"  % "sbt-jmh"               % "0.3.3")
+addSbtPlugin("com.timushev.sbt"    % "sbt-updates"           % "0.3.4")
+addSbtPlugin("com.github.tkawachi" % "sbt-doctest"           % "0.7.1")
