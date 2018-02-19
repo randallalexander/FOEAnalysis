@@ -86,8 +86,11 @@ lazy val buildSettings = Seq(
     "co.fs2" %% "fs2-core" % fs2Version,
     "co.fs2" %% "fs2-io" % fs2Version,
 
+    "com.github.scopt" %% "scopt" % "3.7.0",
+
     //config
     "com.typesafe" % "config" % "1.3.2",
+    "io.circe" %% "circe-config" % "0.4.0",
     //logging
     "io.verizon.journal" %% "core" % "3.0.+"
   ),
