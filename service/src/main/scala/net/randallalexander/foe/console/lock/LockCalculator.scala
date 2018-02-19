@@ -5,7 +5,7 @@ import net.randallalexander.foe.console.lock.Model.GreatBuilding
 object LockCalculator {
 
   /*
-    Does not take into account that first person in wins
+    Does not take into account that first person to that amount wins
    */
   def calculateLock(gb:GreatBuilding, competitorFP:Int, contributedSoFarOpt:Option[Int]):Int = {
     val buildingTotal:Double = gb.total.toDouble
