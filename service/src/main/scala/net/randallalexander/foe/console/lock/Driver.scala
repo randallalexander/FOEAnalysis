@@ -5,8 +5,8 @@ import io.circe.config.syntax._
 import net.randallalexander.foe.config.Arc
 
 object Driver extends App {
-  val mainConfig = ConfigFactory.load()
-  val arcEith = mainConfig.as[Arc]("foe.gb.arc")
+  private val mainConfig = ConfigFactory.load()
+  private val arcEith = mainConfig.as[Arc]("foe.gb.arc")
   arcEith match {
     case Left(error) =>
       println(s"Config load error: ${error.getMessage}")
@@ -29,7 +29,7 @@ object Driver extends App {
           println(s"FP Snipe:             ${netFP > 0}")
           println(s"BP Snipe:             ${netFP >= 0}")
           println(s"-------------------------------------")
-          println(s"BP Reward:            ${blueprintsRewardOpt.getOrElse("Unknown")}")
+          println(s"BP Reward:            ${blueprintsRewardOpt.map(_.toString).getOrElse("Unknown")}")
             ()
         case None =>
           ()

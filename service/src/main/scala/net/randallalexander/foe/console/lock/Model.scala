@@ -1,11 +1,11 @@
 package net.randallalexander.foe.console.lock
 
 object Model {
-  case class GreatBuilding(total:Int, runningTotal:Int)
-  case class Reward(forgePoints:Int, bluePrints:Option[Int])
+  final case class GreatBuilding(total:Int, runningTotal:Int)
+  final case class Reward(forgePoints:Int, bluePrints:Option[Int])
 
   sealed trait Mode
   object Mode {
-    case object CalculateLock extends Mode
+    final case object CalculateLock extends Mode
   }
 }

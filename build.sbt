@@ -92,7 +92,10 @@ lazy val buildSettings = Seq(
     "com.typesafe" % "config" % "1.3.2",
     "io.circe" %% "circe-config" % "0.4.0",
     //logging
-    "io.verizon.journal" %% "core" % "3.0.+"
+    "io.verizon.journal" %% "core" % "3.0.+",
+
+    //cassandra
+    "com.datastax.cassandra" % "cassandra-driver-core" % "3.4.0"
   ),
 
   // Uncomment to enable benchmarking.

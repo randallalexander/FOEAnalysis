@@ -2,15 +2,18 @@ package net.randallalexander.foe.console.lock
 
 import net.randallalexander.foe.console.lock.Model.Mode.CalculateLock
 import net.randallalexander.foe.console.lock.Model.{GreatBuilding, Mode, Reward}
+import scopt.OptionParser
 
-case class Config(greatBuilding: GreatBuilding, reward:Reward, nearestFP:Int, mode:Mode, contributedSoFar:Option[Int])
+final case class Config(greatBuilding: GreatBuilding, reward:Reward, nearestFP:Int, mode:Mode, contributedSoFar:Option[Int])
 
 object Config {
-  def consoleDefaultConfig=Config(GreatBuilding(0,0),Reward(0,None),0,CalculateLock,None)
+  def consoleDefaultConfig: Config =Config(GreatBuilding(0,0),Reward(0,None),0,CalculateLock,None)
 }
 
 object Console {
-  val parser = new scopt.OptionParser[Config]("Arc") {
+  //just gonna ignore this for now
+  @SuppressWarnings(Array("org.wartremover.warts.NonUnitStatements"))
+  val parser: OptionParser[Config] = new scopt.OptionParser[Config]("Arc") {
     head("FP Return Calculator", "0.1.0")
 
     opt[Int]('t', "GBTarget")
